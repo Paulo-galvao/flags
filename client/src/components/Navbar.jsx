@@ -1,6 +1,8 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import Cookies from "js-cookie";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   return (
     <nav>
       <div className="nav-container">
@@ -9,7 +11,16 @@ export default function Navbar() {
             <img src="../public/logo.png" alt="logo" />
           </Link>
         </span>
-        <button>Login</button>
+        {
+          !Cookies.get("token") ? 
+            <Link className="login-active" to={"/login"}>
+              <button>Login</button>
+            </Link>
+          : <button onClick={() => {
+              Cookies.remove("token");
+              navigate('/');
+            }}>Logout</button>
+        }
       </div>
     </nav>
   );

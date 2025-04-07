@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import { useParams } from "react-router"
+import { useParams, Link } from "react-router"
+import Cookies from "js-cookie"
 
 export default function Search() {
   const { name } = useParams();
@@ -36,6 +37,21 @@ export default function Search() {
             <p>Continente: {flag.continent}</p>
             <p>População estimada: {flag.population}</p>
           </div>
+          { Cookies.get("token") ? 
+                <>
+                <Link to={`/update/${flag.id}`}>
+                  <button className="options-btn update-btn">
+                    <i className='bx bxs-edit'></i>
+                  </button>
+                </Link>
+                <Link to={`/delete/${flag.id}`}>
+                  <button className="options-btn delete-btn">
+                    <i className='bx bxs-trash-alt'></i>
+                  </button>
+                </Link>
+              
+                </> : (<></>)
+              }
         </section>
       </div>
     </>

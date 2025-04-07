@@ -1,5 +1,6 @@
 import e from "express";
 import countriesController from "../controllers/countries.controller.js";
+import authVerification from "../middlewares/auth.middleware.js";
 
 const { getAll, getOne, addNew, update ,deleteOne,
     getByName, getByContinent
@@ -10,7 +11,7 @@ router.get("/search", getByName);
 router.get("/", getAll);
 router.get("/filter", getByContinent);
 
-router.post("/add", addNew);
+router.post("/add", authVerification, addNew);
 
 router.get("/:id", getOne);
 router.patch("/update/:id", update);

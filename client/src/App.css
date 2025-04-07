@@ -98,6 +98,7 @@ nav {
   background-color: #FDF5E6;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  position: relative;
 }
 
 .main-area .card img {
@@ -141,7 +142,7 @@ nav {
   display: block;
   position: absolute;
   margin-top: 10px;
-  
+  z-index: 1;
 }
 
 /*
@@ -198,8 +199,17 @@ nav {
 .error-input-msg {
   color: red;
   font-size: .9em;
-  position: relative;
-  bottom: 5px;
+  position: absolute;
+  
+}
+
+.login-name {
+  top: 150px;
+  left: 30px;
+}
+.login-password {
+  top: 220px;
+  left: 30px;
 }
 
 /*
@@ -218,9 +228,122 @@ nav {
   background-color: #FDF5E6;
   margin: 0 auto;
   padding: 20px;
+  position: relative;
 }
 
 
 .search-flag img {
   max-width: 800px;
+}
+
+/*
+  LOGIN
+*/
+
+.login-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  width: 300px;
+  height: 380px;
+  background-color: #FDF5E6;
+  position: relative;
+}
+
+.login-container form h2 {
+  text-align: center;
+  font-family: "Jost", sans-serif;
+}
+
+.login-container form input {
+  height: 35px;
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 8px;
+  background-color: #eDe5d6;
+  padding-left: 30px;
+  
+}
+
+.login-container form button {
+  height: 40px;
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.login-container form button:hover {
+  background-color: #222;
+}
+
+.login-container form span {
+  width: 80%;
+  margin: 0 auto;
+  font-size: .9rem;
+}
+
+.login-container form span a {
+  color: #800080;
+}
+
+.login-container form span a:hover {
+  color: #a000a0;
+  border-bottom: 1px solid #a000a0;
+}
+
+.login-container form i {
+  position: absolute;
+
+}
+
+.login-container form .bx-user {
+  top: 118px;
+  left: 40px;
+}
+
+.login-container form .bx-lock {
+  bottom: 177px;
+  left: 40px;
+}
+
+/*
+  OPTIONS
+*/
+.options-btn {
+  position: absolute;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.options-btn.active {
+}
+
+.update-btn {
+  display: flex;
+  bottom: 40px;
+}
+
+.delete-btn {
+  bottom: 10px;
 }
