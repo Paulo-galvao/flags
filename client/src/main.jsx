@@ -11,8 +11,8 @@ import Continent from './pages/Continent.jsx';
 import GetOne from './pages/GetOne.jsx';
 import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
-import Dashboard from './pages/Dashboard.jsx';
 import Update from './pages/Update.jsx';
+import Delete from './pages/Delete.jsx';
 
 import './index.css'
 
@@ -28,8 +28,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='/continent/:continent' element={<Continent/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<SignUp/>} />
-        <Route path='/dashboard' element={<Dashboard/>} />
         <Route path='/update/:id' element={<Update/>} />
+        <Route path='/delete/:id' element={<Delete />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

@@ -14,7 +14,7 @@ router.get("/filter", getByContinent);
 router.post("/add", authVerification, addNew);
 
 router.get("/:id", getOne);
-router.patch("/update/:id", update);
-router.delete("/delete/:id", deleteOne);
+router.patch("/update/:id", authVerification, update);
+router.delete("/delete/:id", authVerification, deleteOne);
 
 export default router;

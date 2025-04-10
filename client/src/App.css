@@ -1,5 +1,7 @@
 :root {
   --std-width: 900px;
+  --font-title: "Jost", sans-serif;
+  --font-text: "Roboto", sans-serif;
 }
 
 li {
@@ -14,7 +16,8 @@ a {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-  font-family: "Roboto", sans-serif;;
+  font-family: var(--font-text);
+  /* font-family: "Jost", sans-serif; */
 }
 /* Navbar */
 nav {
@@ -35,7 +38,8 @@ nav {
   padding: 8px 15px;
   cursor: pointer;
   font-weight: bold;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  font-family: var(--font-title);
   transition: .4s;
 }
 
@@ -165,11 +169,13 @@ nav {
   width: 50%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .add-area form input {
   margin: 10px 0;
   height: 40px;
+  width: 100%;
   border: none;
   border-bottom: 1.7px solid #c1c1c1;
   outline: none;
@@ -193,14 +199,20 @@ nav {
 .add-area form h3 {
   text-align: center;
   margin: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--font-title);
 }
 
-.error-input-msg {
+.error-add-msg {
   color: red;
   font-size: .9em;
   position: absolute;
-  
+  left: 0;
+  top: 50px;
+}
+
+.input-area {
+  position: relative;
+  width: 100%;
 }
 
 .login-name {
@@ -323,6 +335,11 @@ nav {
   left: 40px;
 }
 
+.login-container .error-input-msg {
+  color: red;
+  position: absolute;
+}
+
 /*
   OPTIONS
 */
@@ -339,6 +356,10 @@ nav {
 .options-btn.active {
 }
 
+/*
+  UPDATE
+*/
+
 .update-btn {
   display: flex;
   bottom: 40px;
@@ -346,4 +367,27 @@ nav {
 
 .delete-btn {
   bottom: 10px;
+}
+
+/*
+  DELETE
+*/
+
+.delete-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width:900px) {
+  .main-area {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width:600px) {
+  .main-area {
+    grid-template-columns: 1fr;
+  }
 }

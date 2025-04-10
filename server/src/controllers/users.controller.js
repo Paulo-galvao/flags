@@ -30,7 +30,7 @@ async function login(req, res) {
     }
 }
 
-async function signIn(req, res) {
+async function signup(req, res) {
     try {
         const { username, password } = req.body;
 
@@ -46,4 +46,4 @@ async function signIn(req, res) {
     }
 }
 
-export default { login, signIn };
+export default { login, signup };

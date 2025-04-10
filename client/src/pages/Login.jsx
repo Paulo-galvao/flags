@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import Cookies from "js-cookie";
+import Navbar from "../components/Navbar";
 
 export default function Login() {
   const url = "http://localhost:3021/users/login";
@@ -18,10 +19,10 @@ export default function Login() {
     try {
       const response = await fetch(url, {
         method: "POST",
+        body: JSON.stringify(body),
         headers: {
           'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
+        }
       });
       const data = await response.json();
       const token = data.token
@@ -39,15 +40,7 @@ export default function Login() {
 
   return (
     <>
-      <nav>
-        <div className="nav-container">
-          <span className="nav-logo">
-            <Link to={"/"}>
-              <img src="../public/logo.png" alt="logo" />
-            </Link>
-          </span>
-        </div>
-      </nav>
+      <Navbar />
       <div className="general-container">
         <div className="login-container">
           <form onSubmit={handleSubmit(onSubmit)}>

@@ -30,7 +30,8 @@ export default function Home() {
       <div className="general-container">
         <SearchArea />
         {!Cookies.get("token") ? <> </> : 
-          <div>
+          <div className="dashboard">
+            <h2>Seja bem-vindo</h2>
             <Link to={"/add"}>
               <button>Adicionar uma nova bandeira</button>
             </Link>
