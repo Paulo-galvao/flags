@@ -14,8 +14,6 @@ import SignUp from './pages/SignUp.jsx';
 import Update from './pages/Update.jsx';
 import Delete from './pages/Delete.jsx';
 
-import './index.css'
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: var(--font-text);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --std-width: 900px;
   --font-title: "Jost", sans-serif;
@@ -10,84 +19,26 @@ li {
 
 a {
   text-decoration: none;
-  color: #000
+  color: #000;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-  font-family: var(--font-text);
-  /* font-family: "Jost", sans-serif; */
-}
-/* Navbar */
-nav {
-  background-color: #FFF8DC;
-}
-
-.nav-container {
-  max-width: var(--std-width);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-container button{
-  background: transparent;
-  border: none;
-  padding: 8px 15px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.2rem;
-  font-family: var(--font-title);
-  transition: .4s;
-}
-
-.nav-container button:hover {
-  color: #555;
-}
-
-.nav-logo {
-  max-height: 50px;
-  display: flex;
-}
-
-.nav-logo img {
-  max-height: 50px;
-  
-}
-
-/*
-  HOME
+/* componentes em assets: 
+  Navbar 
+  Search 
+  Continent 
 */
 
+/* pages em assets:
+  ADD-AREA
+  HOME
+  LOGIN
+*/
 
 .general-container {
   max-width: var(--std-width);
   margin: 0 auto;
-  
 }
-
-/* Search */
-
-.search-area {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 100px 0;
-}
-
-.search-area form {
-  width: 80%;
-
-}
-
-.search-area input {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-
 
 /* Main-Area */
 
@@ -99,7 +50,7 @@ nav {
 }
 
 .main-area .card {
-  background-color: #FDF5E6;
+  background-color: #fdf5e6;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   position: relative;
@@ -111,121 +62,8 @@ nav {
   border-radius: 12px 12px 0 0;
 }
 
-/* Continent */
-
-.continent {
-  position: relative;
-  right: 40px;
-}
-
-.continent-btn {
-  cursor: pointer;
-
-}
-
-.continent-options {
-  cursor: pointer;
-  display: none;
-  background-color: #FDF5E6;
-  border: 2px solid #555;
-}
-
-.continent-options li {
-  padding: 5px;
-  border-bottom: 1px solid #555;
-  width: 140px;
-  font-size: .9rem;
-  transition: .5s;
-}
-
-.continent-options li:hover {
-  background-color: #eDe5E6;
-}
-
-.continent-options.active {
-  display: block;
-  position: absolute;
-  margin-top: 10px;
-  z-index: 1;
-}
-
 /*
-  ADD-AREA
-*/
-
-.add-area {
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.add-area form {
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  border-radius: 12px;
-  background-color: #FFF8DC;
-  padding: 20px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.add-area form input {
-  margin: 10px 0;
-  height: 40px;
-  width: 100%;
-  border: none;
-  border-bottom: 1.7px solid #c1c1c1;
-  outline: none;
-}
-
-.add-area form button {
-  height: 40px;
-  margin: 20px 0;
-  cursor: pointer;
-  font-weight: bold;
-  background-color: lightsteelblue;
-  border: none;
-  border-radius: 5px;
-  transition: .4s;
-}
-
-.add-area form button:hover {
-  color: #fff;
-}
-
-.add-area form h3 {
-  text-align: center;
-  margin: 10px;
-  font-family: var(--font-title);
-}
-
-.error-add-msg {
-  color: red;
-  font-size: .9em;
-  position: absolute;
-  left: 0;
-  top: 50px;
-}
-
-.input-area {
-  position: relative;
-  width: 100%;
-}
-
-.login-name {
-  top: 150px;
-  left: 30px;
-}
-.login-password {
-  top: 220px;
-  left: 30px;
-}
-
-/*
-  SEARCH
+SEARCH
 */
 
 .search-container {
@@ -237,107 +75,14 @@ nav {
 }
 
 .search-flag {
-  background-color: #FDF5E6;
+  background-color: #fdf5e6;
   margin: 0 auto;
   padding: 20px;
   position: relative;
 }
 
-
 .search-flag img {
   max-width: 800px;
-}
-
-/*
-  LOGIN
-*/
-
-.login-container {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-container form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 35px;
-  border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  width: 300px;
-  height: 380px;
-  background-color: #FDF5E6;
-  position: relative;
-}
-
-.login-container form h2 {
-  text-align: center;
-  font-family: "Jost", sans-serif;
-}
-
-.login-container form input {
-  height: 35px;
-  width: 80%;
-  margin: 0 auto;
-  border: none;
-  border-radius: 8px;
-  background-color: #eDe5d6;
-  padding-left: 30px;
-  
-}
-
-.login-container form button {
-  height: 40px;
-  cursor: pointer;
-  width: 80%;
-  margin: 0 auto;
-  background-color: #000;
-  color: #fff;
-  font-family: "Jost", sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: .3s;
-}
-
-.login-container form button:hover {
-  background-color: #222;
-}
-
-.login-container form span {
-  width: 80%;
-  margin: 0 auto;
-  font-size: .9rem;
-}
-
-.login-container form span a {
-  color: #800080;
-}
-
-.login-container form span a:hover {
-  color: #a000a0;
-  border-bottom: 1px solid #a000a0;
-}
-
-.login-container form i {
-  position: absolute;
-
-}
-
-.login-container form .bx-user {
-  top: 118px;
-  left: 40px;
-}
-
-.login-container form .bx-lock {
-  bottom: 177px;
-  left: 40px;
-}
-
-.login-container .error-input-msg {
-  color: red;
-  position: absolute;
 }
 
 /*
@@ -351,9 +96,6 @@ nav {
   display: flex;
   justify-content: center;
   cursor: pointer;
-}
-
-.options-btn.active {
 }
 
 /*
@@ -380,13 +122,13 @@ nav {
   align-items: center;
 }
 
-@media(max-width:900px) {
+@media (max-width: 900px) {
   .main-area {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
   .main-area {
     grid-template-columns: 1fr;
   }

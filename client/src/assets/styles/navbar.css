@@ -1,0 +1,35 @@
+nav {
+  background-color: #fff8dc;
+}
+
+.nav-container {
+  max-width: var(--std-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container button {
+  background: transparent;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: var(--font-title);
+  transition: 0.4s;
+}
+
+.nav-container button:hover {
+  color: #555;
+}
+
+.nav-logo {
+  max-height: 50px;
+  display: flex;
+}
+
+.nav-logo img {
+  max-height: 50px;
+}

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import Cookies from "js-cookie";
 import Navbar from "../components/Navbar";
+import "../assets/styles/login.css";
 
 export default function Login() {
   const url = "http://localhost:3021/users/login";

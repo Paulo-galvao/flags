@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
-
+import "../assets/styles/search.css";
 
 export default function SearchArea() {
   const navigate = useNavigate();

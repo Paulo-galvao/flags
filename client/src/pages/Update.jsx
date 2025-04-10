@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router";
 import { useEffect } from "react";
+import "../assets/styles/add-update.css";
 import Navbar from "../components/Navbar.jsx"
 import Cookies from "js-cookie";
 

@@ -1,0 +1,50 @@
+.search-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0;
+}
+
+.search-area form {
+  width: 80%;
+}
+
+.search-area input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.continent {
+  position: relative;
+  right: 40px;
+}
+
+.continent-btn {
+  cursor: pointer;
+}
+
+.continent-options {
+  cursor: pointer;
+  display: none;
+  background-color: #fdf5e6;
+  border: 2px solid #555;
+}
+
+.continent-options li {
+  padding: 5px;
+  border-bottom: 1px solid #555;
+  width: 140px;
+  font-size: 0.9rem;
+  transition: 0.5s;
+}
+
+.continent-options li:hover {
+  background-color: #ede5e6;
+}
+
+.continent-options.active {
+  display: block;
+  position: absolute;
+  margin-top: 10px;
+  z-index: 1;
+}
